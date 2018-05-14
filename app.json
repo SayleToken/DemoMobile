@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "SayleMoney",
+    "description": "SayleMoney",
+    "slug": "saylemoney",
+    "privacy": "public",
+    "sdkVersion": "27.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/sayle.png",
+    "splash": {
+      "image": "./assets/images/sayle.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#052a4d"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
