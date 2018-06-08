@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActivityIndicator, StyleSheet, View ,Text,FlatList,ListItem } from 'react-native';
 
-export default class LinksScreen extends React.Component {
+export default class UsersScreen extends React.Component {
   static navigationOptions = {
     title: 'Users',
   };
@@ -12,7 +12,7 @@ export default class LinksScreen extends React.Component {
   }
 
   componentDidMount(){
-    return fetch('http://ec2-52-17-126-108.eu-west-1.compute.amazonaws.com:3000/api/users')
+    return fetch('http://ec2-34-245-47-221.eu-west-1.compute.amazonaws.com:3000/api/users')
       .then((response) => response.json())
       .then((responseJson) => {
 
