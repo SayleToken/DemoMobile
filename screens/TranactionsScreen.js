@@ -12,10 +12,9 @@ export default class TransactionsScreen extends React.Component {
   }
 
   componentDidMount(){
-    return fetch('http://ec2-52-17-126-108.eu-west-1.compute.amazonaws.com:3000/api/transactions')
+    return fetch('http://ec2-34-245-47-221.eu-west-1.compute.amazonaws.com:3000/api/transactions')
       .then((response) => response.json())
       .then((responseJson) => {
-       console.log(responseJson.data.docs)
         this.setState({
           isLoading: false,
           dataSource: responseJson.data.docs,
@@ -45,7 +44,7 @@ export default class TransactionsScreen extends React.Component {
       <View>
         <FlatList
           data={this.state.dataSource}
-          renderItem ={({item}) =>    <Text style={styles.item}>{item.product}</Text>
+          renderItem ={({item}) =>    <Text style={styless.item}>{item.product}</Text>
           }
           keyExtractor={(item, index) =>index}
         />
@@ -56,13 +55,13 @@ export default class TransactionsScreen extends React.Component {
  
 
 }
-const styles = StyleSheet.create({
+const styless = StyleSheet.create({
   container: {
    flex: 1,
    paddingTop: 22
   },
   item: {
-    padding: 20,
+    padding: 10,
     fontSize: 18,
     height: 44
   },
