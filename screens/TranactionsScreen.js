@@ -12,7 +12,7 @@ export default class TransactionsScreen extends React.Component {
   }
 
   componentDidMount(){
-    return fetch('http://ec2-18-220-64-6.us-east-2.compute.amazonaws.com:3000/api/transactions')
+    return fetch('http://ec2-52-17-126-108.eu-west-1.compute.amazonaws.com:3000/api/transactions')
       .then((response) => response.json())
       .then((responseJson) => {
        console.log(responseJson.data.docs)
