@@ -83,7 +83,9 @@ export default class HomeScreen extends React.Component {
   }
   _submitpayment = () => {
     s=this.state;
-    fetch('http://ec2-18-220-64-6.us-east-2.compute.amazonaws.com:3000/api/transactions', {
+    if(s.customer != ''){
+   
+    fetch('http://ec2-34-245-47-221.eu-west-1.compute.amazonaws.com:3000/api/transactions', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -97,6 +99,8 @@ export default class HomeScreen extends React.Component {
       }),
     })
     .then((r) => {
+      Alert.alert(" Check your email " + s.customer)
+
      // Alert.alert(" Success " + r.message)
     })
     .catch((error) => {
@@ -104,8 +108,8 @@ export default class HomeScreen extends React.Component {
 
       console.error(error);
     });
-    Alert.alert(" Check your email " + s.customer)
-  }
+    Alert.alert(" Sending email... ")
+  }}
   // _maybeRenderDevelopmentModeWarning() {
   //   if (__DEV__) {
   //     const learnMoreButton = (
